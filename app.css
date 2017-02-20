@@ -1,0 +1,76 @@
+.confirmationContainer{
+    position: relative;
+}
+.confirmationContainer.selected:focus{
+    outline: 0;
+}
+.confirmationContainer.selected .confirmationBox {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacityIE)";
+    filter: alpha(opacity=100);
+    top: -90px;
+    width: 200px;
+    height: auto; //80px;
+    overflow: visible;
+    -webkit-transition: opacity 0.3s, top 0.3s, width 0s, height 0s;
+    -webkit-transition-delay: 0s, 0s, 0s, 0s;
+    -moz-transition: opacity 0.3s, top 0.3s, width 0s 0s, height 0s 0s;
+    -o-transition: opacity 0.3s, top 0.3s, width 0s 0s, height 0s 0s;
+    transition: opacity 0.3s, top 0.3s, width 0s 0s, height 0s 0s;
+    z-index: 1;
+}
+.confirmationContainer .confirmationBox {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    margin-left: -100px;
+    overflow: hidden;
+    background: #1C242B;
+    width: 0px;
+    height: 0px;
+    border-radius: 5px;
+    text-indent: 0px;
+    cursor: default;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacityIE)";
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.3s, top 0.3s, width 0s, height 0s;
+    -webkit-transition-delay: 0s, 0s, 0.3s, 0.3s;
+    -moz-transition: opacity 0.3s, top 0.3s, width 0s 0.3s, height 0s 0.3s;
+    -o-transition: opacity 0.3s, top 0.3s, width 0s 0.3s, height 0s 0.3s;
+    transition: opacity 0.3s, top 0.3s, width 0s 0.3s, height 0s 0.3s;
+    z-index: -1;
+}
+.confirmationContainer .confirmationBox:after {
+    content: '';
+    display: block;
+    width: 0px;
+    left: 0px;
+    border-top: 5px solid #1C242B;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+}
+.confirmationContainer .confirmationBox p {
+    padding: 5px;
+    text-align: center;
+    white-space: normal;
+}
+
+.confirmationContainer .confirmationBox span {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    margin: 0 10px;
+    width: 80px;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+    margin-bottom: 10px;
+}
